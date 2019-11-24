@@ -1,0 +1,29 @@
+This is just a text file documenting my current vision for the blurb structure.
+
+A Blurb has the following fields that need to be passed in:
+    1) Event Name - String, user provided
+    2) Location - String, user provided + X, Y coordinates on the API map
+    3) Club - Reference to an existing Club object, so ALL events have to be associated with a club
+    4) DateTime - self explanatory, user provided
+
+    The Blurb then Extrapolates the following information from the data provided:
+        1) Club logo - fetched from the club object
+        2) Background Graphic - fetched from event category
+        3) ?maybe an icon of the building where it is happening?
+
+The basic structure of the code should be:
+
+    Padding:
+        Container:
+            Stack:
+                A list of positioned Widgets corresponding to the fields described above
+
+----------------------------------------------------------------------------------------------------
+|                                                                                                  |
+|   EVENT TITLE                                                                     CLUB LOGO      |
+|                                                                                   CLUB NAME      |
+|   LOCATION                                                                                       |
+|                                                                                                  |
+|   DATETIME                                                                        RSVP BUTTON    |
+|                                                                                                  |
+----------------------------------------------------------------------------------------------------
